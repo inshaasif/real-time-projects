@@ -327,6 +327,138 @@ h3{
     gap: .8rem;
 }
 .sale-txt{
-    font-size: 2.2rem;
+    font-size: 2.2rem;   
+}
+
+.celebrate{
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.glow1, .glow2{
+    position: absolute;
+    width: 15rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    filter: blur(150px);
+}
+.glow1{
+    top: 50px;
+    left: 50px;
+    background: orangered;
+}
+.glow2{
+    bottom: 50px;
+    right: 50px;
+    background: blue;
+}
+
+
+
+/*---Gallery Section---*/
+.gallery-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+.image-gallery{
+    height: 25rem;
+    width: 100%;
+}
+
+.image-gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+
+/*---Footer Section*/
+.footer-txt{
+    color: var(--primary-white);
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+
+
+
+
+
+/*---Media Queries---*/
+@media screen and (max-width: 580px) {
+    .navlist{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        inset: 0;
+        background: var(--primary-black);
+        transform: translateX(-100%);
+        transition: transform .3s ease-in-out;
+    }
+
+    .navlist-active{
+        transform: translateX(0);
+    }
+
+    .logo{
+        z-index: 5;
+    }
+
+    .navlinks{
+        font-size: 1.1rem;
+
+    }
+
+    .hamburger{
+        display: block;
+        cursor: pointer;
+        z-index: 5;
+    }
+
+    .hero-section{
+        flex-direction: column;
+    }
+
+    .right-container, .product-container, .sale-product{
+        display: none;
+    }
+    .middle-container{
+        height: 28rem;
+        margin: auto;
+    }
+    h1{
+        font-size: 2.2rem;
+    }
+
+    .left-container{
+        margin-top: 4rem;
+    }
+
+    h2{
+        font-size: 2.9rem
+    }
+
+    .para, .footer-txt{
+        font-size: .95rem;
+    }
+
+    .grid-card-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .gallery-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sale-txt{
+        font-size: 2rem;
+    }
     
 }
